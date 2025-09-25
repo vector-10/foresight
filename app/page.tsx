@@ -1,7 +1,6 @@
 // "use client";
-// import Link from "next/link";
-// import Image from "next/image";
 // import { useState, useEffect } from "react";
+// import  Link from "next/link"
 // import { ArrowRight, Users, Shield, TrendingUp, Star, Coins, Target, Clock, Menu, X, Wallet, Lock } from 'lucide-react';
 
 // export default function ForesightLanding() {
@@ -18,19 +17,16 @@
 //   }, []);
 
 //   return (
-//     <div className="relative min-h-screen text-white bg-[radial-gradient(60%_60%_at_50%_-10%,rgba(107,70,193,0.25),transparent),radial-gradient(40%_30%_at_100%_10%,rgba(59,130,246,0.18),transparent)]">
+//     <div className="relative min-h-screen text-white bg-[radial-gradient(60%_60%_at_50%_-10%,rgba(0,180,216,0.25),transparent),radial-gradient(40%_30%_at_100%_10%,rgba(123,104,238,0.18),transparent)]">
 //       <div aria-hidden className="pointer-events-none fixed inset-0 bg-[linear-gradient(rgba(255,255,255,0.06)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.06)_1px,transparent_1px)] bg-[length:32px_32px] [mask-image:radial-gradient(ellipse_at_center,black_60%,transparent_100%)]" />
 
 //       <header className="sticky top-0 z-40 border-b border-white/10 backdrop-blur supports-[backdrop-filter]:bg-white/5">
 //         <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4">
 //           <Link href="/" className="group inline-flex items-center">
-//             <Image 
-//               src="/foresight.png"
-//               width={150}
-//               height={150}
-//               alt="Foresight logo"
-//             />
-//             <span className="bg-gradient-to-r from-purple-400 via-blue-300 to-indigo-200 bg-clip-text text-lg font-bold tracking-tight text-transparent group-hover:opacity-90">
+//             <div className="w-8 h-8 rounded-full border-2 border-cyan-400 flex items-center justify-center mr-2">
+//               <div className="w-0 h-0 border-l-[6px] border-l-transparent border-r-[6px] border-r-transparent border-b-[10px] border-b-cyan-400"></div>
+//             </div>
+//             <span className="bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-lg font-bold tracking-tight text-transparent group-hover:opacity-90">
 //               Foresight
 //             </span>
 //           </Link>
@@ -42,9 +38,9 @@
 //           </nav>
 
 //           <div className="flex items-center gap-3">
-//             <Link href="/dashboard" className="hidden md:flex items-center rounded-sm bg-purple-600 px-4 py-3 text-sm font-semibold text-white shadow hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-300">
+//             <a href="/dashboard" className="hidden md:flex items-center rounded-sm bg-gradient-to-r from-cyan-500 to-blue-600 px-4 py-3 text-sm font-semibold text-white shadow hover:from-cyan-600 hover:to-blue-700 focus:outline-none focus:ring-2 focus:ring-cyan-300">
 //               Open Dashboard <ArrowRight className="h-4 w-4 font-bold" />
-//             </Link>
+//             </a>
 //             <button
 //               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
 //               className="md:hidden p-2 text-white hover:bg-white/10 rounded-sm"
@@ -66,7 +62,7 @@
 //         isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
 //       }`}>
 //         <div className="flex items-center justify-between p-6 border-b border-white/20">
-//           <span className="bg-gradient-to-r from-purple-400 via-blue-300 to-indigo-200 bg-clip-text font-bold tracking-tight text-transparent">Menu</span>
+//           <span className="bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text font-bold tracking-tight text-transparent">Menu</span>
 //           <button
 //             onClick={() => setIsMobileMenuOpen(false)}
 //             className="p-2 text-white hover:bg-white/10 rounded-sm transition-colors"
@@ -83,9 +79,9 @@
 //           </div>
 
 //           <div className="mt-auto pt-6 border-t border-white/10">
-//             <Link href="/dashboard" onClick={() => setIsMobileMenuOpen(false)} className="flex items-center justify-center gap-2 rounded-sm bg-purple-600 px-4 py-3 text-sm font-semibold text-white hover:bg-purple-700 transition-colors">
+//             <a href="/dashboard" onClick={() => setIsMobileMenuOpen(false)} className="flex items-center justify-center gap-2 rounded-sm bg-gradient-to-r from-cyan-500 to-blue-600 px-4 py-3 text-sm font-semibold text-white hover:from-cyan-600 hover:to-blue-700 transition-colors">
 //               Open Dashboard <ArrowRight className="h-4 w-4" />
-//             </Link>
+//             </a>
             
 //             <div className="pt-4 text-center">
 //               <p className="text-sm text-white/60">
@@ -98,12 +94,12 @@
 
 //       <section className="relative mx-auto max-w-5xl px-4 pt-32 pb-20 text-center">
 //         <div className="space-y-8 scroll-reveal">
-//           <span className="inline-flex items-center gap-2 rounded-sm border border-white/15 bg-white/10 px-3 py-1 text-xs text-white/90">
+//           <span className="inline-flex items-center gap-2 rounded-sm border border-cyan-400/30 bg-cyan-400/10 px-3 py-1 text-xs text-cyan-300">
 //             <Wallet className="h-4 w-4" /> AI Agents for DAO Treasuries
 //           </span>
           
 //           <h1 className="text-balance text-4xl font-extrabold tracking-tight md:text-6xl lg:text-7xl">
-//             Private, Explainable <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-400 to-purple-300">Treasury Intelligence</span>
+//             Private, Explainable <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400">Treasury Intelligence</span>
 //           </h1>
           
 //           <p className="mx-auto max-w-3xl text-lg leading-relaxed text-white/80 md:text-xl">
@@ -111,17 +107,17 @@
 //           </p>
           
 //           <div className="flex flex-wrap justify-center gap-4 pt-4">
-//             <Link href="/dashboard" className="inline-flex items-center gap-2 rounded-sm bg-purple-600 px-6 py-4 text-sm font-semibold text-white hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-300 transition-all">
+//             <a href="/dashboard" className="inline-flex items-center gap-2 rounded-sm bg-gradient-to-r from-cyan-500 to-blue-600 px-6 py-4 text-sm font-semibold text-white hover:from-cyan-600 hover:to-blue-700 focus:outline-none focus:ring-2 focus:ring-cyan-300 transition-all">
 //               Try the Agent <ArrowRight className="h-4 w-4" />
-//             </Link>
-//             <a href="#features" className="rounded-sm border border-white/20 bg-white/5 px-6 py-4 text-sm font-semibold text-white hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-white/20 transition-all">
+//             </a>
+//             <a href="#features" className="rounded-sm border border-cyan-400/30 bg-cyan-400/5 px-6 py-4 text-sm font-semibold text-white hover:bg-cyan-400/10 focus:outline-none focus:ring-2 focus:ring-cyan-400/20 transition-all">
 //               View Features
 //             </a>
 //           </div>
           
 //           <div className="flex flex-wrap justify-center font-bold gap-8 pt-6 text-white/70">
-//             <div className="flex items-center gap-2"><Shield className="h-4 w-4"/> Privacy-Sealed Reports</div>
-//             <div className="flex items-center gap-2"><Lock className="h-4 w-4"/> Self-Custody Keys (MCP)</div>
+//             <div className="flex items-center gap-2"><Shield className="h-4 w-4 text-cyan-400"/> Privacy-Sealed Reports</div>
+//             <div className="flex items-center gap-2"><Lock className="h-4 w-4 text-blue-400"/> Self-Custody Keys (MCP)</div>
 //           </div>
 //         </div>
 //       </section>
@@ -139,8 +135,8 @@
 //             {icon: <Clock className="h-5 w-5"/>, title: "Continuous Monitoring", desc: "Schedule daily checks; alert when stables ratio or position caps drift."},
 //             {icon: <Users className="h-5 w-5"/>, title: "Agent-Native", desc: "Built on Eliza + MCP modules; extend with compliance or multi-agent workflows."}
 //           ].map((f, i) => (
-//             <div key={i} className="h-full rounded-sm border border-white/10 bg-white/5 p-6 backdrop-blur transition hover:bg-white/10 scroll-reveal">
-//               <div className="mb-3 inline-flex h-9 w-9 items-center justify-center rounded-sm bg-white/10">{f.icon}</div>
+//             <div key={i} className="h-full rounded-sm border border-cyan-400/20 bg-gradient-to-br from-cyan-400/5 to-blue-500/5 p-6 backdrop-blur transition hover:border-cyan-400/40 hover:from-cyan-400/10 hover:to-blue-500/10 scroll-reveal">
+//               <div className="mb-3 inline-flex h-9 w-9 items-center justify-center rounded-sm bg-gradient-to-br from-cyan-400/20 to-blue-500/20 text-cyan-400">{f.icon}</div>
 //               <div className="text-lg font-semibold">{f.title}</div>
 //               <p className="text-white/70">{f.desc}</p>
 //             </div>
@@ -156,8 +152,8 @@
 //             {s:"2", h:"Analyze Privately", d:"Agent computes risk & runway, then seals the full report on Midnight MCP."},
 //             {s:"3", h:"Act with Clarity", d:"Share the public summary + governance text; iterate or schedule daily checks."},
 //           ].map((x) => (
-//             <div key={x.s} className="relative rounded-sm border border-white/10 bg-white/5 p-6 scroll-reveal">
-//               <div className="mb-2 inline-flex h-7 w-7 items-center justify-center rounded-full bg-purple-600 text-sm font-bold">{x.s}</div>
+//             <div key={x.s} className="relative rounded-sm border border-cyan-400/20 bg-gradient-to-br from-cyan-400/5 to-blue-500/5 p-6 scroll-reveal">
+//               <div className="mb-2 inline-flex h-7 w-7 items-center justify-center rounded-full bg-gradient-to-r from-cyan-500 to-blue-600 text-sm font-bold">{x.s}</div>
 //               <div className="text-lg font-semibold">{x.h}</div>
 //               <p className="text-white/70">{x.d}</p>
 //             </div>
@@ -172,10 +168,10 @@
 //           </h2>
           
 //           <div className="grid md:grid-cols-3 gap-8">
-//             <div className="bg-white/5 border border-white/10 rounded-sm p-6 backdrop-blur transform rotate-1 scroll-reveal">
+//             <div className="bg-gradient-to-br from-cyan-400/5 to-blue-500/5 border border-cyan-400/20 rounded-sm p-6 backdrop-blur transform rotate-1 scroll-reveal">
 //               <div className="flex mb-4">
 //                 {[...Array(5)].map((_, i) => (
-//                   <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+//                   <Star key={i} className="w-5 h-5 text-cyan-400 fill-current" />
 //                 ))}
 //               </div>
 //               <p className="text-white/70 mb-4">
@@ -185,10 +181,10 @@
 //               <div className="text-sm text-white/60">Treasury Working Group</div>
 //             </div>
             
-//             <div className="bg-white/5 border border-white/10 rounded-sm p-6 backdrop-blur transform -rotate-1 scroll-reveal">
+//             <div className="bg-gradient-to-br from-blue-500/5 to-purple-500/5 border border-blue-400/20 rounded-sm p-6 backdrop-blur transform -rotate-1 scroll-reveal">
 //               <div className="flex mb-4">
 //                 {[...Array(5)].map((_, i) => (
-//                   <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+//                   <Star key={i} className="w-5 h-5 text-blue-400 fill-current" />
 //                 ))}
 //               </div>
 //               <p className="text-white/70 mb-4">
@@ -198,10 +194,10 @@
 //               <div className="text-sm text-white/60">DAO Council</div>
 //             </div>
             
-//             <div className="bg-white/5 border border-white/10 rounded-sm p-6 backdrop-blur transform rotate-2 scroll-reveal">
+//             <div className="bg-gradient-to-br from-purple-500/5 to-cyan-400/5 border border-purple-400/20 rounded-sm p-6 backdrop-blur transform rotate-2 scroll-reveal">
 //               <div className="flex mb-4">
 //                 {[...Array(5)].map((_, i) => (
-//                   <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+//                   <Star key={i} className="w-5 h-5 text-purple-400 fill-current" />
 //                 ))}
 //               </div>
 //               <p className="text-white/70 mb-4">
@@ -215,14 +211,14 @@
 //       </section>
 
 //       <section className="mx-auto max-w-7xl px-4 pb-24">
-//         <div className="overflow-hidden rounded-sm border border-white/10 bg-gradient-to-br from-white/5 via-white/10 to-white/5 p-8 text-center shadow-lg scroll-reveal">
+//         <div className="overflow-hidden rounded-sm border border-cyan-400/20 bg-gradient-to-br from-cyan-400/10 via-blue-500/10 to-purple-500/10 p-8 text-center shadow-lg scroll-reveal">
 //           <h3 className="text-balance text-2xl font-bold md:text-3xl">Ready to get real numbers—privately?</h3>
 //           <p className="mx-auto mt-2 max-w-2xl text-white/80">Run Foresight on your treasury, share a public summary, and keep sensitive details sealed.</p>
 //           <div className="mt-6 flex justify-center gap-3">
-//             <Link href="/dashboard" className="inline-flex items-center gap-2 rounded-sm bg-purple-600 px-5 py-3 text-sm font-semibold text-white hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-300">
+//             <a href="/dashboard" className="inline-flex items-center gap-2 rounded-sm bg-gradient-to-r from-cyan-500 to-blue-600 px-5 py-3 text-sm font-semibold text-white hover:from-cyan-600 hover:to-blue-700 focus:outline-none focus:ring-2 focus:ring-cyan-300">
 //               Open Foresight <ArrowRight className="h-4 w-4" />
-//             </Link>
-//             <a href="#features" className="rounded-sm border border-white/20 bg-white/5 px-5 py-3 text-sm font-semibold text-white hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-white/20">View Features</a>
+//             </a>
+//             <a href="#features" className="rounded-sm border border-cyan-400/30 bg-cyan-400/5 px-5 py-3 text-sm font-semibold text-white hover:bg-cyan-400/10 focus:outline-none focus:ring-2 focus:ring-cyan-400/20">View Features</a>
 //           </div>
 //         </div>
 //       </section>
@@ -231,10 +227,10 @@
 //         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-4 text-white/70 md:flex-row">
 //           <div className="text-sm">© {new Date().getFullYear()} Foresight. Built with Eliza + Midnight.</div>
 //           <div className="flex items-center gap-5 text-sm">
-//             <a href="#" className="hover:text-white">Terms</a>
-//             <a href="#" className="hover:text-white">Privacy</a>
-//             <a href="#" className="hover:text-white">Docs</a>
-//             <a href="#" className="hover:text-white">Support</a>
+//             <a href="#" className="hover:text-cyan-400">Terms</a>
+//             <a href="#" className="hover:text-cyan-400">Privacy</a>
+//             <a href="#" className="hover:text-cyan-400">Docs</a>
+//             <a href="#" className="hover:text-cyan-400">Support</a>
 //           </div>
 //         </div>
 //       </footer>
@@ -255,11 +251,8 @@
 
 
 
-
-
 "use client";
 import { useState, useEffect } from "react";
-import  Link from "next/link"
 import { ArrowRight, Users, Shield, TrendingUp, Star, Coins, Target, Clock, Menu, X, Wallet, Lock } from 'lucide-react';
 
 export default function ForesightLanding() {
@@ -276,19 +269,19 @@ export default function ForesightLanding() {
   }, []);
 
   return (
-    <div className="relative min-h-screen text-white bg-[radial-gradient(60%_60%_at_50%_-10%,rgba(0,180,216,0.25),transparent),radial-gradient(40%_30%_at_100%_10%,rgba(123,104,238,0.18),transparent)]">
+          <div className="relative min-h-screen text-white bg-[radial-gradient(60%_60%_at_50%_-10%,rgba(37,173,239,0.25),transparent),radial-gradient(40%_30%_at_100%_10%,rgba(123,104,238,0.18),transparent)]">
       <div aria-hidden className="pointer-events-none fixed inset-0 bg-[linear-gradient(rgba(255,255,255,0.06)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.06)_1px,transparent_1px)] bg-[length:32px_32px] [mask-image:radial-gradient(ellipse_at_center,black_60%,transparent_100%)]" />
 
       <header className="sticky top-0 z-40 border-b border-white/10 backdrop-blur supports-[backdrop-filter]:bg-white/5">
         <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4">
-          <Link href="/" className="group inline-flex items-center">
-            <div className="w-8 h-8 rounded-full border-2 border-cyan-400 flex items-center justify-center mr-2">
-              <div className="w-0 h-0 border-l-[6px] border-l-transparent border-r-[6px] border-r-transparent border-b-[10px] border-b-cyan-400"></div>
+          <a href="/" className="group inline-flex items-center">
+            <div className="w-8 h-8 rounded-full border-2 border-[#25adef] flex items-center justify-center mr-2">
+              <div className="w-0 h-0 border-l-[6px] border-l-transparent border-r-[6px] border-r-transparent border-b-[10px] border-b-[#25adef]"></div>
             </div>
-            <span className="bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-lg font-bold tracking-tight text-transparent group-hover:opacity-90">
+            <span className="bg-gradient-to-r from-[#25adef] via-[#5b7ce6] to-[#7b68ee] bg-clip-text text-lg font-bold tracking-tight text-transparent group-hover:opacity-90">
               Foresight
             </span>
-          </Link>
+          </a>
 
           <nav className="hidden items-center gap-6 text-sm text-white/80 md:flex">
             <a href="#features" className="hover:text-white">Features</a>
@@ -297,7 +290,7 @@ export default function ForesightLanding() {
           </nav>
 
           <div className="flex items-center gap-3">
-            <a href="/dashboard" className="hidden md:flex items-center rounded-sm bg-gradient-to-r from-cyan-500 to-blue-600 px-4 py-3 text-sm font-semibold text-white shadow hover:from-cyan-600 hover:to-blue-700 focus:outline-none focus:ring-2 focus:ring-cyan-300">
+            <a href="/dashboard" className="hidden md:flex items-center rounded-sm bg-gradient-to-r from-[#25adef] to-[#5b7ce6] px-4 py-3 text-sm font-semibold text-white shadow hover:from-[#1e9bd6] hover:to-[#4a6cd5] focus:outline-none focus:ring-2 focus:ring-[#25adef]/50">
               Open Dashboard <ArrowRight className="h-4 w-4 font-bold" />
             </a>
             <button
@@ -321,7 +314,7 @@ export default function ForesightLanding() {
         isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
       }`}>
         <div className="flex items-center justify-between p-6 border-b border-white/20">
-          <span className="bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text font-bold tracking-tight text-transparent">Menu</span>
+          <span className="bg-gradient-to-r from-[#25adef] via-[#5b7ce6] to-[#7b68ee] bg-clip-text font-bold tracking-tight text-transparent">Menu</span>
           <button
             onClick={() => setIsMobileMenuOpen(false)}
             className="p-2 text-white hover:bg-white/10 rounded-sm transition-colors"
@@ -338,7 +331,7 @@ export default function ForesightLanding() {
           </div>
 
           <div className="mt-auto pt-6 border-t border-white/10">
-            <a href="/dashboard" onClick={() => setIsMobileMenuOpen(false)} className="flex items-center justify-center gap-2 rounded-sm bg-gradient-to-r from-cyan-500 to-blue-600 px-4 py-3 text-sm font-semibold text-white hover:from-cyan-600 hover:to-blue-700 transition-colors">
+            <a href="/dashboard" onClick={() => setIsMobileMenuOpen(false)} className="flex items-center justify-center gap-2 rounded-sm bg-gradient-to-r from-[#25adef] to-[#5b7ce6] px-4 py-3 text-sm font-semibold text-white hover:from-[#1e9bd6] hover:to-[#4a6cd5] transition-colors">
               Open Dashboard <ArrowRight className="h-4 w-4" />
             </a>
             
@@ -353,12 +346,12 @@ export default function ForesightLanding() {
 
       <section className="relative mx-auto max-w-5xl px-4 pt-32 pb-20 text-center">
         <div className="space-y-8 scroll-reveal">
-          <span className="inline-flex items-center gap-2 rounded-sm border border-cyan-400/30 bg-cyan-400/10 px-3 py-1 text-xs text-cyan-300">
+          <span className="inline-flex items-center gap-2 rounded-sm border border-[#25adef]/30 bg-[#25adef]/10 px-3 py-1 text-xs text-[#25adef]">
             <Wallet className="h-4 w-4" /> AI Agents for DAO Treasuries
           </span>
           
           <h1 className="text-balance text-4xl font-extrabold tracking-tight md:text-6xl lg:text-7xl">
-            Private, Explainable <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400">Treasury Intelligence</span>
+            Private, Explainable <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#25adef] via-[#5b7ce6] to-[#7b68ee]">Treasury Intelligence</span>
           </h1>
           
           <p className="mx-auto max-w-3xl text-lg leading-relaxed text-white/80 md:text-xl">
@@ -366,17 +359,17 @@ export default function ForesightLanding() {
           </p>
           
           <div className="flex flex-wrap justify-center gap-4 pt-4">
-            <a href="/dashboard" className="inline-flex items-center gap-2 rounded-sm bg-gradient-to-r from-cyan-500 to-blue-600 px-6 py-4 text-sm font-semibold text-white hover:from-cyan-600 hover:to-blue-700 focus:outline-none focus:ring-2 focus:ring-cyan-300 transition-all">
+            <a href="/dashboard" className="inline-flex items-center gap-2 rounded-sm bg-gradient-to-r from-[#25adef] to-[#5b7ce6] px-6 py-4 text-sm font-semibold text-white hover:from-[#1e9bd6] hover:to-[#4a6cd5] focus:outline-none focus:ring-2 focus:ring-[#25adef]/50 transition-all">
               Try the Agent <ArrowRight className="h-4 w-4" />
             </a>
-            <a href="#features" className="rounded-sm border border-cyan-400/30 bg-cyan-400/5 px-6 py-4 text-sm font-semibold text-white hover:bg-cyan-400/10 focus:outline-none focus:ring-2 focus:ring-cyan-400/20 transition-all">
+            <a href="#features" className="rounded-sm border border-[#25adef]/30 bg-[#25adef]/5 px-6 py-4 text-sm font-semibold text-white hover:bg-[#25adef]/10 focus:outline-none focus:ring-2 focus:ring-[#25adef]/20 transition-all">
               View Features
             </a>
           </div>
           
           <div className="flex flex-wrap justify-center font-bold gap-8 pt-6 text-white/70">
-            <div className="flex items-center gap-2"><Shield className="h-4 w-4 text-cyan-400"/> Privacy-Sealed Reports</div>
-            <div className="flex items-center gap-2"><Lock className="h-4 w-4 text-blue-400"/> Self-Custody Keys (MCP)</div>
+            <div className="flex items-center gap-2"><Shield className="h-4 w-4 text-[#25adef]"/> Privacy-Sealed Reports</div>
+            <div className="flex items-center gap-2"><Lock className="h-4 w-4 text-[#5b7ce6]"/> Self-Custody Keys (MCP)</div>
           </div>
         </div>
       </section>
@@ -394,8 +387,8 @@ export default function ForesightLanding() {
             {icon: <Clock className="h-5 w-5"/>, title: "Continuous Monitoring", desc: "Schedule daily checks; alert when stables ratio or position caps drift."},
             {icon: <Users className="h-5 w-5"/>, title: "Agent-Native", desc: "Built on Eliza + MCP modules; extend with compliance or multi-agent workflows."}
           ].map((f, i) => (
-            <div key={i} className="h-full rounded-sm border border-cyan-400/20 bg-gradient-to-br from-cyan-400/5 to-blue-500/5 p-6 backdrop-blur transition hover:border-cyan-400/40 hover:from-cyan-400/10 hover:to-blue-500/10 scroll-reveal">
-              <div className="mb-3 inline-flex h-9 w-9 items-center justify-center rounded-sm bg-gradient-to-br from-cyan-400/20 to-blue-500/20 text-cyan-400">{f.icon}</div>
+            <div key={i} className="h-full rounded-sm border border-[#25adef]/20 bg-gradient-to-br from-[#25adef]/5 to-[#5b7ce6]/5 p-6 backdrop-blur transition hover:border-[#25adef]/40 hover:from-[#25adef]/10 hover:to-[#5b7ce6]/10 scroll-reveal">
+              <div className="mb-3 inline-flex h-9 w-9 items-center justify-center rounded-sm bg-gradient-to-br from-[#25adef]/20 to-[#5b7ce6]/20 text-[#25adef]">{f.icon}</div>
               <div className="text-lg font-semibold">{f.title}</div>
               <p className="text-white/70">{f.desc}</p>
             </div>
@@ -411,8 +404,8 @@ export default function ForesightLanding() {
             {s:"2", h:"Analyze Privately", d:"Agent computes risk & runway, then seals the full report on Midnight MCP."},
             {s:"3", h:"Act with Clarity", d:"Share the public summary + governance text; iterate or schedule daily checks."},
           ].map((x) => (
-            <div key={x.s} className="relative rounded-sm border border-cyan-400/20 bg-gradient-to-br from-cyan-400/5 to-blue-500/5 p-6 scroll-reveal">
-              <div className="mb-2 inline-flex h-7 w-7 items-center justify-center rounded-full bg-gradient-to-r from-cyan-500 to-blue-600 text-sm font-bold">{x.s}</div>
+            <div key={x.s} className="relative rounded-sm border border-[#25adef]/20 bg-gradient-to-br from-[#25adef]/5 to-[#5b7ce6]/5 p-6 scroll-reveal">
+              <div className="mb-2 inline-flex h-7 w-7 items-center justify-center rounded-full bg-gradient-to-r from-[#25adef] to-[#5b7ce6] text-sm font-bold">{x.s}</div>
               <div className="text-lg font-semibold">{x.h}</div>
               <p className="text-white/70">{x.d}</p>
             </div>
@@ -427,10 +420,10 @@ export default function ForesightLanding() {
           </h2>
           
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-gradient-to-br from-cyan-400/5 to-blue-500/5 border border-cyan-400/20 rounded-sm p-6 backdrop-blur transform rotate-1 scroll-reveal">
+            <div className="bg-gradient-to-br from-[#25adef]/5 to-[#5b7ce6]/5 border border-[#25adef]/20 rounded-sm p-6 backdrop-blur transform rotate-1 scroll-reveal">
               <div className="flex mb-4">
                 {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-5 h-5 text-cyan-400 fill-current" />
+                  <Star key={i} className="w-5 h-5 text-[#25adef] fill-current" />
                 ))}
               </div>
               <p className="text-white/70 mb-4">
@@ -440,10 +433,10 @@ export default function ForesightLanding() {
               <div className="text-sm text-white/60">Treasury Working Group</div>
             </div>
             
-            <div className="bg-gradient-to-br from-blue-500/5 to-purple-500/5 border border-blue-400/20 rounded-sm p-6 backdrop-blur transform -rotate-1 scroll-reveal">
+            <div className="bg-gradient-to-br from-[#5b7ce6]/5 to-[#7b68ee]/5 border border-[#5b7ce6]/20 rounded-sm p-6 backdrop-blur transform -rotate-1 scroll-reveal">
               <div className="flex mb-4">
                 {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-5 h-5 text-blue-400 fill-current" />
+                  <Star key={i} className="w-5 h-5 text-[#5b7ce6] fill-current" />
                 ))}
               </div>
               <p className="text-white/70 mb-4">
@@ -453,10 +446,10 @@ export default function ForesightLanding() {
               <div className="text-sm text-white/60">DAO Council</div>
             </div>
             
-            <div className="bg-gradient-to-br from-purple-500/5 to-cyan-400/5 border border-purple-400/20 rounded-sm p-6 backdrop-blur transform rotate-2 scroll-reveal">
+            <div className="bg-gradient-to-br from-[#7b68ee]/5 to-[#25adef]/5 border border-[#7b68ee]/20 rounded-sm p-6 backdrop-blur transform rotate-2 scroll-reveal">
               <div className="flex mb-4">
                 {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-5 h-5 text-purple-400 fill-current" />
+                  <Star key={i} className="w-5 h-5 text-[#7b68ee] fill-current" />
                 ))}
               </div>
               <p className="text-white/70 mb-4">
@@ -470,14 +463,14 @@ export default function ForesightLanding() {
       </section>
 
       <section className="mx-auto max-w-7xl px-4 pb-24">
-        <div className="overflow-hidden rounded-sm border border-cyan-400/20 bg-gradient-to-br from-cyan-400/10 via-blue-500/10 to-purple-500/10 p-8 text-center shadow-lg scroll-reveal">
+        <div className="overflow-hidden rounded-sm border border-[#25adef]/20 bg-gradient-to-br from-[#25adef]/10 via-[#5b7ce6]/10 to-[#7b68ee]/10 p-8 text-center shadow-lg scroll-reveal">
           <h3 className="text-balance text-2xl font-bold md:text-3xl">Ready to get real numbers—privately?</h3>
           <p className="mx-auto mt-2 max-w-2xl text-white/80">Run Foresight on your treasury, share a public summary, and keep sensitive details sealed.</p>
           <div className="mt-6 flex justify-center gap-3">
-            <a href="/dashboard" className="inline-flex items-center gap-2 rounded-sm bg-gradient-to-r from-cyan-500 to-blue-600 px-5 py-3 text-sm font-semibold text-white hover:from-cyan-600 hover:to-blue-700 focus:outline-none focus:ring-2 focus:ring-cyan-300">
+            <a href="/dashboard" className="inline-flex items-center gap-2 rounded-sm bg-gradient-to-r from-[#25adef] to-[#5b7ce6] px-5 py-3 text-sm font-semibold text-white hover:from-[#1e9bd6] hover:to-[#4a6cd5] focus:outline-none focus:ring-2 focus:ring-[#25adef]/50">
               Open Foresight <ArrowRight className="h-4 w-4" />
             </a>
-            <a href="#features" className="rounded-sm border border-cyan-400/30 bg-cyan-400/5 px-5 py-3 text-sm font-semibold text-white hover:bg-cyan-400/10 focus:outline-none focus:ring-2 focus:ring-cyan-400/20">View Features</a>
+            <a href="#features" className="rounded-sm border border-[#25adef]/30 bg-[#25adef]/5 px-5 py-3 text-sm font-semibold text-white hover:bg-[#25adef]/10 focus:outline-none focus:ring-2 focus:ring-[#25adef]/20">View Features</a>
           </div>
         </div>
       </section>
@@ -486,10 +479,10 @@ export default function ForesightLanding() {
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-4 text-white/70 md:flex-row">
           <div className="text-sm">© {new Date().getFullYear()} Foresight. Built with Eliza + Midnight.</div>
           <div className="flex items-center gap-5 text-sm">
-            <a href="#" className="hover:text-cyan-400">Terms</a>
-            <a href="#" className="hover:text-cyan-400">Privacy</a>
-            <a href="#" className="hover:text-cyan-400">Docs</a>
-            <a href="#" className="hover:text-cyan-400">Support</a>
+            <a href="#" className="hover:text-[#25adef]">Terms</a>
+            <a href="#" className="hover:text-[#25adef]">Privacy</a>
+            <a href="#" className="hover:text-[#25adef]">Docs</a>
+            <a href="#" className="hover:text-[#25adef]">Support</a>
           </div>
         </div>
       </footer>
