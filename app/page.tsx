@@ -259,6 +259,7 @@
 
 "use client";
 import { useState, useEffect } from "react";
+import  Link from "next/link"
 import { ArrowRight, Users, Shield, TrendingUp, Star, Coins, Target, Clock, Menu, X, Wallet, Lock } from 'lucide-react';
 
 export default function ForesightLanding() {
@@ -280,14 +281,14 @@ export default function ForesightLanding() {
 
       <header className="sticky top-0 z-40 border-b border-white/10 backdrop-blur supports-[backdrop-filter]:bg-white/5">
         <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4">
-          <a href="/" className="group inline-flex items-center">
+          <Link href="/" className="group inline-flex items-center">
             <div className="w-8 h-8 rounded-full border-2 border-cyan-400 flex items-center justify-center mr-2">
               <div className="w-0 h-0 border-l-[6px] border-l-transparent border-r-[6px] border-r-transparent border-b-[10px] border-b-cyan-400"></div>
             </div>
             <span className="bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-lg font-bold tracking-tight text-transparent group-hover:opacity-90">
               Foresight
             </span>
-          </a>
+          </Link>
 
           <nav className="hidden items-center gap-6 text-sm text-white/80 md:flex">
             <a href="#features" className="hover:text-white">Features</a>
