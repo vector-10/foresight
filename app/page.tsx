@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link"
 import { ArrowRight, Users, Shield, TrendingUp, Star, Coins, Target, Clock, Menu, X, Wallet, Lock } from 'lucide-react';
 
-export default function ForesightLanding() {
+export default function Home() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
