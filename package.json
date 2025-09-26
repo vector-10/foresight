@@ -7,7 +7,8 @@
     "build": "next build --turbopack",
     "start": "next start",
     "lint": "eslint",
-    "test:risk": "tsx scripts/test-risk-monitor.ts"
+    "test:risk": "tsx scripts/test-risk-monitor.ts",
+    "test:portfolio": "tsx scripts/test-portfolio-manager.ts"
   },
   "dependencies": {
     "@ai16z/adapter-sqlite": "^0.1.6",
