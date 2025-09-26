@@ -13,6 +13,7 @@
     "@ai16z/adapter-sqlite": "^0.1.6",
     "@ai16z/eliza": "^0.1.6",
     "axios": "^1.12.2",
+    "dotenv": "^17.2.2",
     "ethers": "^6",
     "lucide-react": "^0.544.0",
     "next": "15.5.4",
@@ -29,6 +30,7 @@
     "eslint": "^9",
     "eslint-config-next": "15.5.4",
     "tailwindcss": "^4",
+    "tsx": "^4.20.6",
     "typescript": "^5"
   }
 }
