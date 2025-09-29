@@ -89,46 +89,33 @@ Direct API connections to Snapshot, Tally, and on-chain governance contracts. Au
 ## Repository Structure
 
 ```
-foresight/
-├── app/                    # Next.js pages and API routes
-│   ├── dashboard/          # Main dashboard interface
-│   ├── api/               # Analysis and chat endpoints
-│   └── layout.tsx         # Root layout with providers
-├── lib/
-│   ├── treasury/          # Analysis and allocation logic
-│   ├── midnight/          # Privacy layer integration
-│   └── ai/                # Agent implementation
-└── types/                 # TypeScript definitions
-```
-
 ## Setup Instructions
 
 Install dependencies:
 ```bash
-pnpm install
+npm install
 ```
 
 Configure environment variables in `.env.local`:
 ```
-MIDNIGHT_WALLET_ADDRESS=your_wallet_address
-NEXT_PUBLIC_API_URL=http://localhost:3000
+MN_SHIELD_WALLET_ADDRESS=your_wallet_address
+OPENAI_API_KEY=http://localhost:3000
 ```
 
 Run development server:
 ```bash
-pnpm dev
+npm run dev
 ```
 
 Access dashboard at `http://localhost:3000/dashboard`
 
 ## Technology Stack
 
-- Next.js 14 with App Router
+- Next.js 15+ with App Router
 - TypeScript for type safety
 - Midnight MCP for privacy-preserving blockchain operations
 - Tailwind CSS for styling
-- ethers.js for Ethereum interaction
-- CoinGecko API for price data
+
 
 ## License
 
