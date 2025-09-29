@@ -1,4 +1,5 @@
 import type { Plugin } from '@elizaos/core';
+import { analyzeTreasuryAction } from './actions/analyzeTreasury';
 import {
   type Action,
   type ActionResult,
@@ -274,7 +275,7 @@ const plugin: Plugin = {
     ],
   },
   services: [StarterService],
-  actions: [helloWorldAction],
+  actions: [helloWorldAction, analyzeTreasuryAction],
   providers: [helloWorldProvider],
 };
 
