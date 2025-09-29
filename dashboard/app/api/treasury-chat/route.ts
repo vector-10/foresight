@@ -36,8 +36,6 @@
 
 
 
-
-
 import { NextResponse } from 'next/server';
 // import OpenAI from 'openai';
 // const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
@@ -46,40 +44,40 @@ import { NextResponse } from 'next/server';
 const SIMULATED_RESPONSES: Record<string, string> = {
   risk: `Based on your current metrics, the main risks are:
 
-🔴 **Extreme DGOV Concentration (98.1%)**
+🔴 Extreme DGOV Concentration (98.1%)
 - Single token represents nearly entire treasury
 - Vulnerable to governance token volatility
 - Limits operational flexibility
 
-🟡 **Zero Stablecoin Buffer**
+🟡 Zero Stablecoin Buffer
 - No immediate liquidity for expenses
 - Can't weather market downturns
 - Unable to capitalize on opportunities
 
-**Immediate Action**: Rebalance 200 DGOV → 150 DFUND + 50 tDUST within 7 days.`,
+Immediate Action: Rebalance 200 DGOV → 150 DFUND + 50 tDUST within 7 days.`,
 
-  rebalance: `**Recommended Rebalancing Strategy:**
+  rebalance: `Recommended Rebalancing Strategy:
 
-**Phase 1 (Week 1)**: Reduce concentration risk
+Phase 1 (Week 1): Reduce concentration risk
 - Sell 200 DGOV tokens
 - Buy 150 DFUND (stablecoin reserve)
 - Acquire 50 tDUST (operational buffer)
 
-**Target Allocation:**
+Target Allocation:
 - DFUND: 30-40% (stability)
 - DGOV: 40-50% (governance rights)
 - tDUST: 10-20% (operations)
 
-**New Risk Score**: Would drop from 8/10 to 4/10
+New Risk Score: Would drop from 8/10 to 4/10
 
 Execute during low-volatility periods to minimize slippage.`,
 
-  dfund: `**DFUND Analysis:**
+  dfund: `DFUND Analysis:
 
 Current: 10 tokens (1.96% of treasury)
 Target: 150-200 tokens (30-40%)
 
-**Why Increase DFUND?**
+Why Increase DFUND?
 - Acts as volatility buffer
 - Provides immediate liquidity
 - Enables strategic opportunities
@@ -87,25 +85,25 @@ Target: 150-200 tokens (30-40%)
 
 Your treasury lacks downside protection. With only 10 DFUND, you can't cover unexpected expenses or weather DGOV price drops.`,
 
-  dgov: `**DGOV Analysis:**
+  dgov: `DGOV Analysis:
 
 Current: 500 tokens (98.04% of treasury)
 Risk: EXTREME concentration
 
-**Concerns:**
+Concerns:
 - Over-reliance on single volatile asset
 - Governance token can swing 20-50%
 - Limits diversification options
 - Creates existential risk
 
-**Recommendation**: Maintain 200-250 DGOV (enough for governance participation) and diversify the rest. You don't need 500 DGOV to have influence.`,
+Recommendation: Maintain 200-250 DGOV (enough for governance participation) and diversify the rest. You don't need 500 DGOV to have influence.`,
 
-  dust: `**tDUST Analysis:**
+  dust: `tDUST Analysis:
 
 Current: 0 tokens
 Recommendation: 50-100 tokens (10-20%)
 
-**Why Add tDUST?**
+Why Add tDUST?
 - Native Midnight blockchain token
 - Required for transaction fees
 - Can stake for yield
@@ -113,53 +111,53 @@ Recommendation: 50-100 tokens (10-20%)
 
 Zero tDUST means you're dependent on others for gas fees. This is a critical oversight for autonomous DAO operations.`,
 
-  health: `**Treasury Health Report:**
+  health: `Treasury Health Report:
 
-📊 **Overall Score: 2/10** (Critical)
+📊 Overall Score: 2/10 (Critical)
 
-**Strengths:**
+Strengths:
 ✅ Sufficient TVL (510 tokens)
 ✅ Has governance power via DGOV
 
-**Critical Issues:**
+Critical Issues:
 ❌ 98% in single volatile asset
 ❌ No stablecoin reserves
 ❌ No operational token (tDUST)
 ❌ Cannot handle volatility
 ❌ Limited operational autonomy
 
-**Status**: URGENT REBALANCING REQUIRED
+Status: URGENT REBALANCING REQUIRED
 
 This treasury would fail basic risk management audits. Immediate action needed.`,
 
-  strategy: `**90-Day Treasury Strategy:**
+  strategy: `90-Day Treasury Strategy:
 
-**Month 1: Stabilization**
+Month 1: Stabilization
 - Rebalance to 40% DFUND / 40% DGOV / 20% tDUST
 - Set up automated risk monitoring
 - Establish emergency reserve (100 DFUND minimum)
 
-**Month 2: Optimization**
+Month 2: Optimization
 - Evaluate DGOV staking opportunities
 - Test tDUST yield strategies
 - Review quarterly burn/mint schedules
 
-**Month 3: Growth**
+Month 3: Growth
 - Assess new token additions
 - Implement dynamic rebalancing rules
 - Set up treasury dashboard for community
 
-**Goal**: Drop risk score from 8/10 to 3/10 while maintaining governance power.`,
+Goal: Drop risk score from 8/10 to 3/10 while maintaining governance power.`,
 
   default: `I can help analyze your treasury from multiple angles:
 
-📊 **Risk Assessment** - Current vulnerabilities
-🔄 **Rebalancing** - Optimal allocation strategies  
-💰 **Token Analysis** - Deep dives on DFUND, DGOV, tDUST
-🏥 **Health Check** - Overall treasury fitness
-📈 **Strategy** - Long-term management plan
+📊 Risk Assessment - Current vulnerabilities
+🔄 Rebalancing - Optimal allocation strategies  
+💰 Token Analysis - Deep dives on DFUND, DGOV, tDUST
+🏥 Health Check - Overall treasury fitness
+📈 Strategy - Long-term management plan
 
-Your current setup has **extreme concentration risk** (98% DGOV). Ask me about any specific topic!`
+Your current setup has extreme concentration risk (98% DGOV). Ask me about any specific topic!`
 };
 
 export async function POST(req: Request) {

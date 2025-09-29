@@ -76,6 +76,8 @@
 
 
 
+
+
 import { NextResponse } from 'next/server';
 // import OpenAI from 'openai';
 
@@ -155,24 +157,24 @@ function generateTreasuryAnalysis(metrics: {
 }) {
   const { tvl, DFUND, DGOV, tDUST, stablecoinRatio, concentrationRisk, riskScore } = metrics;
   
-  let analysis = `**Treasury Risk Assessment**\n\n`;
+  let analysis = `Treasury Risk Assessment\n\n`;
   
   // Concentration analysis
   if (concentrationRisk > 90) {
-    analysis += `🔴 **CRITICAL**: ${concentrationRisk.toFixed(1)}% concentrated in ${DGOV > DFUND ? 'DGOV' : 'DFUND'}. Extremely vulnerable to single-asset volatility.\n\n`;
+    analysis += `🔴 CRITICAL: ${concentrationRisk.toFixed(1)}% concentrated in ${DGOV > DFUND ? 'DGOV' : 'DFUND'}. Extremely vulnerable to single-asset volatility.\n\n`;
   } else if (concentrationRisk > 70) {
-    analysis += `🟡 **WARNING**: ${concentrationRisk.toFixed(1)}% concentration risk detected.\n\n`;
+    analysis += `🟡 WARNING: ${concentrationRisk.toFixed(1)}% concentration risk detected.\n\n`;
   }
   
   // Stablecoin analysis
   if (stablecoinRatio < 10) {
-    analysis += `🔴 **URGENT**: Only ${stablecoinRatio.toFixed(1)}% in stablecoins (DFUND). Treasury has minimal buffer against volatility.\n\n`;
+    analysis += `🔴 URGENT: Only ${stablecoinRatio.toFixed(1)}% in stablecoins (DFUND). Treasury has minimal buffer against volatility.\n\n`;
   } else if (stablecoinRatio < 30) {
     analysis += `🟡 Low stablecoin reserves at ${stablecoinRatio.toFixed(1)}%. Consider increasing DFUND allocation.\n\n`;
   }
   
   // Recommendations
-  analysis += `**Recommended Actions:**\n`;
+  analysis += `Recommended Actions:\n`;
   
   if (DGOV > tvl * 0.7) {
     analysis += `- Reduce DGOV position from ${DGOV} to ~${Math.round(tvl * 0.5)} tokens (50% target)\n`;
@@ -184,7 +186,7 @@ function generateTreasuryAnalysis(metrics: {
     analysis += `- Current tDUST balance is zero. Allocate 10-20% for operational expenses\n`;
   }
   
-  analysis += `\n**Risk Score: ${riskScore}/10** ${riskScore > 5 ? '(Action Required)' : '(Acceptable Range)'}`;
+  analysis += `\nRisk Score: ${riskScore}/10 ${riskScore > 5 ? '(Action Required)' : '(Acceptable Range)'}`;
   
   return analysis;
 }
