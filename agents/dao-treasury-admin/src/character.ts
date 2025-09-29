@@ -39,7 +39,7 @@ Always maintain professional, analytical tone focused on protecting DAO treasury
   settings: {
     secrets: {
       OPENAI_API_KEY:
-        "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",
+       process.env.OPENAI_API_KEY
     },
     mcp: {
       servers: {
