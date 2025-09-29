@@ -1,5 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
+import Link from "next/link"
 import { ArrowRight, Users, Shield, TrendingUp, Star, Coins, Target, Clock, Menu, X, Wallet, Lock } from 'lucide-react';
 
 export default function ForesightLanding() {
@@ -21,25 +22,25 @@ export default function ForesightLanding() {
 
       <header className="sticky top-0 z-40 border-b border-white/10 backdrop-blur supports-[backdrop-filter]:bg-white/5">
         <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4">
-          <a href="/" className="group inline-flex items-center">
+          <Link href="/" className="group inline-flex items-center">
             <div className="w-8 h-8 rounded-full border-2 border-cyan-400 flex items-center justify-center mr-2">
               <div className="w-0 h-0 border-l-[6px] border-l-transparent border-r-[6px] border-r-transparent border-b-[10px] border-b-cyan-400"></div>
             </div>
             <span className="bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-lg font-bold tracking-tight text-transparent group-hover:opacity-90">
               Foresight
             </span>
-          </a>
+          </Link>
 
           <nav className="hidden items-center gap-6 text-sm text-white/80 md:flex">
-            <a href="#features" className="hover:text-white">Features</a>
-            <a href="#how" className="hover:text-white">How it works</a>
-            <a href="#testimonials" className="hover:text-white">Feedback</a>
+            <Link href="#features" className="hover:text-white">Features</Link>
+            <Link href="#how" className="hover:text-white">How it works</Link>
+            <Link href="#testimonials" className="hover:text-white">Feedback</Link>
           </nav>
 
           <div className="flex items-center gap-3">
-            <a href="/dashboard" className="hidden md:flex items-center rounded-sm bg-gradient-to-r from-cyan-500 to-blue-600 px-4 py-3 text-sm font-semibold text-white shadow hover:from-cyan-600 hover:to-blue-700 focus:outline-none focus:ring-2 focus:ring-cyan-300">
+            <Link href="/dashboard" className="hidden md:flex items-center rounded-sm bg-gradient-to-r from-cyan-500 to-blue-600 px-4 py-3 text-sm font-semibold text-white shadow hover:from-cyan-600 hover:to-blue-700 focus:outline-none focus:ring-2 focus:ring-cyan-300">
               Open Dashboard <ArrowRight className="h-4 w-4 font-bold" />
-            </a>
+            </Link>
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className="md:hidden p-2 text-white hover:bg-white/10 rounded-sm"
@@ -72,15 +73,15 @@ export default function ForesightLanding() {
 
         <div className="p-6 space-y-6 flex flex-col h-full">
           <div className="space-y-6 flex-1">
-            <a href="#features" onClick={() => setIsMobileMenuOpen(false)} className="block py-3 text-white/80 hover:text-white border-b border-white/10 transition-colors">Features</a>
-            <a href="#how" onClick={() => setIsMobileMenuOpen(false)} className="block py-3 text-white/80 hover:text-white border-b border-white/10 transition-colors">How it works</a>
-            <a href="#testimonials" onClick={() => setIsMobileMenuOpen(false)} className="block py-3 text-white/80 hover:text-white border-b border-white/10 transition-colors">Feedback</a>
+            <Link href="#features" onClick={() => setIsMobileMenuOpen(false)} className="block py-3 text-white/80 hover:text-white border-b border-white/10 transition-colors">Features</Link>
+            <Link href="#how" onClick={() => setIsMobileMenuOpen(false)} className="block py-3 text-white/80 hover:text-white border-b border-white/10 transition-colors">How it works</Link>
+            <Link href="#testimonials" onClick={() => setIsMobileMenuOpen(false)} className="block py-3 text-white/80 hover:text-white border-b border-white/10 transition-colors">Feedback</Link>
           </div>
 
           <div className="mt-auto pt-6 border-t border-white/10">
-            <a href="/dashboard" onClick={() => setIsMobileMenuOpen(false)} className="flex items-center justify-center gap-2 rounded-sm bg-gradient-to-r from-cyan-500 to-blue-600 px-4 py-3 text-sm font-semibold text-white hover:from-cyan-600 hover:to-blue-700 transition-colors">
+            <Link href="/dashboard" onClick={() => setIsMobileMenuOpen(false)} className="flex items-center justify-center gap-2 rounded-sm bg-gradient-to-r from-cyan-500 to-blue-600 px-4 py-3 text-sm font-semibold text-white hover:from-cyan-600 hover:to-blue-700 transition-colors">
               Open Dashboard <ArrowRight className="h-4 w-4" />
-            </a>
+            </Link>
             
             <div className="pt-4 text-center">
               <p className="text-sm text-white/60">
@@ -106,12 +107,12 @@ export default function ForesightLanding() {
           </p>
           
           <div className="flex flex-wrap justify-center gap-4 pt-4">
-            <a href="/dashboard" className="inline-flex items-center gap-2 rounded-sm bg-gradient-to-r from-cyan-500 to-blue-600 px-6 py-4 text-sm font-semibold text-white hover:from-cyan-600 hover:to-blue-700 focus:outline-none focus:ring-2 focus:ring-cyan-300 transition-all">
+            <Link href="/dashboard" className="inline-flex items-center gap-2 rounded-sm bg-gradient-to-r from-cyan-500 to-blue-600 px-6 py-4 text-sm font-semibold text-white hover:from-cyan-600 hover:to-blue-700 focus:outline-none focus:ring-2 focus:ring-cyan-300 transition-all">
               Try the Agent <ArrowRight className="h-4 w-4" />
-            </a>
-            <a href="#features" className="rounded-sm border border-cyan-400/30 bg-cyan-400/5 px-6 py-4 text-sm font-semibold text-white hover:bg-cyan-400/10 focus:outline-none focus:ring-2 focus:ring-cyan-400/20 transition-all">
+            </Link>
+            <Link href="#features" className="rounded-sm border border-cyan-400/30 bg-cyan-400/5 px-6 py-4 text-sm font-semibold text-white hover:bg-cyan-400/10 focus:outline-none focus:ring-2 focus:ring-cyan-400/20 transition-all">
               View Features
-            </a>
+            </Link>
           </div>
           
           <div className="flex flex-wrap justify-center font-bold gap-8 pt-6 text-white/70">
@@ -214,10 +215,10 @@ export default function ForesightLanding() {
           <h3 className="text-balance text-2xl font-bold md:text-3xl">Ready to get real numbers—privately?</h3>
           <p className="mx-auto mt-2 max-w-2xl text-white/80">Run Foresight on your treasury, share a public summary, and keep sensitive details sealed.</p>
           <div className="mt-6 flex justify-center gap-3">
-            <a href="/dashboard" className="inline-flex items-center gap-2 rounded-sm bg-gradient-to-r from-cyan-500 to-blue-600 px-5 py-3 text-sm font-semibold text-white hover:from-cyan-600 hover:to-blue-700 focus:outline-none focus:ring-2 focus:ring-cyan-300">
+            <Link href="/dashboard" className="inline-flex items-center gap-2 rounded-sm bg-gradient-to-r from-cyan-500 to-blue-600 px-5 py-3 text-sm font-semibold text-white hover:from-cyan-600 hover:to-blue-700 focus:outline-none focus:ring-2 focus:ring-cyan-300">
               Open Foresight <ArrowRight className="h-4 w-4" />
-            </a>
-            <a href="#features" className="rounded-sm border border-cyan-400/30 bg-cyan-400/5 px-5 py-3 text-sm font-semibold text-white hover:bg-cyan-400/10 focus:outline-none focus:ring-2 focus:ring-cyan-400/20">View Features</a>
+            </Link>
+            <Link href="#features" className="rounded-sm border border-cyan-400/30 bg-cyan-400/5 px-5 py-3 text-sm font-semibold text-white hover:bg-cyan-400/10 focus:outline-none focus:ring-2 focus:ring-cyan-400/20">View Features</Link>
           </div>
         </div>
       </section>
@@ -226,10 +227,10 @@ export default function ForesightLanding() {
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-4 text-white/70 md:flex-row">
           <div className="text-sm">© {new Date().getFullYear()} Foresight. Built with Eliza + Midnight.</div>
           <div className="flex items-center gap-5 text-sm">
-            <a href="#" className="hover:text-cyan-400">Terms</a>
-            <a href="#" className="hover:text-cyan-400">Privacy</a>
-            <a href="#" className="hover:text-cyan-400">Docs</a>
-            <a href="#" className="hover:text-cyan-400">Support</a>
+            <Link href="#" className="hover:text-cyan-400">Terms</Link>
+            <Link href="#" className="hover:text-cyan-400">Privacy</Link>
+            <Link href="#" className="hover:text-cyan-400">Docs</Link>
+            <Link href="#" className="hover:text-cyan-400">Support</Link>
           </div>
         </div>
       </footer>
