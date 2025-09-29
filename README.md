@@ -32,11 +32,11 @@ A conversational interface allows DAO members to query specific aspects of treas
 
 ### Technical Architecture
 
-**Frontend**: Next.js 14 with TypeScript and Tailwind CSS provides the dashboard interface. Real-time updates via API polling ensure current data display.
+**Frontend**: Next.js 15 with TypeScript and Tailwind CSS provides the dashboard interface. Real-time updates via API polling ensure current data display.
 
 **Analysis Engine**: Custom TypeScript implementation handles balance aggregation, price fetching with caching, and risk metric computation. The calculation layer applies deterministic formulas for TVL, ratios, concentration, and runway projections.
 
-**AI Agent**: Custom built agent (ElizaOS allowed but not required by hackathon rules) processes treasury data, applies allocation policies, and generates natural language explanations. The agent maintains conversation context for multi-turn interactions.
+**AI Agent**: Custom built agent processes treasury data, applies allocation policies, and generates natural language explanations. The agent maintains conversation context for multi-turn interactions.
 
 **Privacy Layer**: Midnight MCP integration enables private transaction submission and confidential data storage. Wallet operations occur through privacy-preserving protocols while maintaining auditability for authorized parties.
 
